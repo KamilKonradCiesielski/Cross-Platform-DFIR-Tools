@@ -26,6 +26,7 @@ To ensure a forensic-grade acquisition where local storage contains full message
 3. Ensure **"Keep messages in all folders for this account on this computer"** is **checked**.
 4. Click **Advanced...** (Zaawansowane) and verify all relevant folders (Inbox, Sent, Trash, etc.) are selected for sync.
 ![Ustawienia konta](./images/1.png)
+![Synchronizacja](./images/2.png)
 
 ### III. Execution of Full Data Sync
 1. Return to the main Thunderbird interface.
