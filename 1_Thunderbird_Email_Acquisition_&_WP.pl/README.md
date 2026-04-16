@@ -19,20 +19,29 @@ Before initiating acquisition, remote access protocols must be manually enabled 
 2. Enable **IMAP - pobieraj i wysyłaj wiadomości**.
 *Note: Failure to enable this will result in "Authentication Failed" errors during the Thunderbird handshake phase.*
 
+![Ustawienia konta](./images/1.png)
+
 ### II. Local Storage Configuration
 To ensure a forensic-grade acquisition where local storage contains full message bodies and attachments (not just headers):
-1. **Right-click** on the WP.pl account in the Thunderbird sidebar and select **Settings** (Ustawienia).
-2. Navigate to **Synchronization & Storage** (Synchronizacja i przechowywanie).
-3. Ensure **"Keep messages in all folders for this account on this computer"** is **checked**.
-4. Click **Advanced...** (Zaawansowane) and verify all relevant folders (Inbox, Sent, Trash, etc.) are selected for sync.
-![Ustawienia konta](./images/1.png)
-![Synchronizacja](./images/2.png)
+1. **Right-click** on the WP.pl account in the Thunderbird sidebar and select **Settings** (Ustawienia konta).
+
+![Ustawienia konta](./images/2.png)
+   
+3. Navigate to **Synchronization & Storage** (Synchronizacja i przechowywanie).
+
+![Synchronizacja](./images/3.png)
+
+4. Ensure **"Keep messages in all folders for this account on this computer"** is **checked**.
+5. Verify all relevant folders (Inbox, Sent, Trash, etc.) are selected for sync.
 
 ### III. Execution of Full Data Sync
 1. Return to the main Thunderbird interface.
 2. Navigate to **File** → **Offline** → **Download/Sync Now...**
-3. In the pop-up window, check **"Mail messages"** and click **OK**.
-4. Monitor the progress bar until the synchronization is complete.
+4. In the pop-up window, check **"Mail messages"** and click **OK**.
+
+![Synchronizacja](./images/4.png)
+   
+6. Monitor the progress bar until the synchronization is complete.
 
 ---
 
