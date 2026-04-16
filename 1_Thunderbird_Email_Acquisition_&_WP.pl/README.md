@@ -19,30 +19,68 @@ Before initiating acquisition, remote access protocols must be manually enabled 
 2. Enable **IMAP - pobieraj i wysyłaj wiadomości**.
 *Note: Failure to enable this will result in "Authentication Failed" errors during the Thunderbird handshake phase.*
 
-![Ustawienia konta](./images/1.png)
+![Account settings](./images/1.png)
 
 ### II. Local Storage Configuration
 To ensure a forensic-grade acquisition where local storage contains full message bodies and attachments (not just headers):
 1. **Right-click** on the WP.pl account in the Thunderbird sidebar and select **Settings** (Ustawienia konta).
 
-![Ustawienia konta](./images/2.png)
+![Account settings](./images/2.png)
    
 3. Navigate to **Synchronization & Storage** (Synchronizacja i przechowywanie).
 
-![Synchronizacja](./images/3.png)
+![Synchronization](./images/3.png)
 
 4. Ensure **"Keep messages in all folders for this account on this computer"** is **checked**.
 5. Verify all relevant folders (Inbox, Sent, Trash, etc.) are selected for sync.
 
-### III. Execution of Full Data Sync
-1. Return to the main Thunderbird interface.
-2. Navigate to **File** → **Offline** → **Download/Sync Now...**
-4. In the pop-up window, check **"Mail messages"** and click **OK**.
+### III. Execution of Full Data Sync & Offline Transition
+
+Instead of manual menu navigation, Thunderbird triggers an automated synchronization prompt when toggling the network status. This ensures no data is left on the server before the client goes offline.
+
+1. **Initiate Offline Toggle:** Click the **Network Icon** (two small monitors) located in the bottom-left corner of the status bar.
+   
+   ![Network Icon Location](./images/9.png)
+
+2. **Handle the Sync Prompt:** A synchronization dialog titled **"Pobierz wiadomości"** (Download Messages) will appear.
+   
+   ![Synchronization Dialog](./images/10.png)
+
+3. **Execution:** Click the **Pobierz** (Download) button.
+   * **Forensic Impact:** This action triggers an immediate, forced synchronization of all subscribed IMAP folders. It ensures that the full message payload is cached locally before the network interface is disabled.
+
+4. **Final Result:** Once the download completes, the network icon will change (showing a red 'x' or greyed-out state), confirming the client is now in **Offline Mode**.
 
 ![Synchronizacja](./images/4.png)
    
 6. Monitor the progress bar until the synchronization is complete.
 
+
+## V. Evidence Export (ZIP Container)
+
+After successful synchronization and validation, the final step is to export the entire profile into a portable and compressed format. This serves as a primary forensic container.
+
+### Steps to execute:
+
+1. **Access Tools:** Click the **Menu button** (three horizontal lines) in the top-right corner of the Thunderbird interface.
+2. **Navigate to Tools:** Select **Narzędzia (Tools)** from the dropdown list.
+   
+![Tools Menu Selection](./images/5.png)
+
+3. **Initiate Export:** Select **Eksportuj (Export)** from the Tools sub-menu.
+
+![Export Selection](./images/6.png)
+
+4. **Confirm Export:** In the newly opened Export tab, click the blue **Eksportuj** button.
+
+ ![Final Export Confirmation](./images/7.png)
+
+5. **Storage:** Save the resulting ZIP file to your secured forensic drive or encrypted container.
+
+> [!IMPORTANT]
+> **Forensic Note:** If the profile size exceeds **2 GB**, Thunderbird will display a warning. In such cases, a manual cold-copy of the profile folder is recommended to avoid data truncation or ZIP file corruption.
+
+---
 ---
 
 ### 🛡️ Data Validation (Post-Acquisition)
