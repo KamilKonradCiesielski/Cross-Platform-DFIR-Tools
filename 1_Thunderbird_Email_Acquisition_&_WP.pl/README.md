@@ -49,13 +49,6 @@ Instead of manual menu navigation, Thunderbird triggers an automated synchroniza
 3. **Execution:** Click the **Pobierz** (Download) button.
    * **Forensic Impact:** This action triggers an immediate, forced synchronization of all subscribed IMAP folders. It ensures that the full message payload is cached locally before the network interface is disabled.
 
-4. **Final Result:** Once the download completes, the network icon will change (showing a red 'x' or greyed-out state), confirming the client is now in **Offline Mode**.
-
-![Synchronizacja](./images/4.png)
-   
-6. Monitor the progress bar until the synchronization is complete.
-
-
 ## V. Evidence Export (ZIP Container)
 
 After successful synchronization and validation, the final step is to export the entire profile into a portable and compressed format. This serves as a primary forensic container.
