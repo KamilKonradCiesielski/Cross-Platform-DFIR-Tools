@@ -20,6 +20,9 @@ For cases where third-party tools cannot be installed, use the native Microsoft 
 
 * **Full PST Export:** Navigate to `Settings` > `General` > `Privacy and Data`. Select **Export Mailbox**.
     * *Forensic Note:* This generates a full mailbox backup. Filtering by specific criteria is not possible during export; the entire dataset must be parsed later.
+ 
+      ![Imap](./images/1.png)
+      
 * **Targeted PDF Print:** For individual high-value messages, use the "Print to PDF" function within the web interface to secure immediate evidence of specific communications.
 
 ### Phase 2: Thunderbird Configuration & OAuth2
