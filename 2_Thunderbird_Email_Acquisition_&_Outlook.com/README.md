@@ -28,7 +28,7 @@ For cases where third-party tools cannot be installed, use the native Microsoft 
 ### Phase 2: Thunderbird Configuration & OAuth2
 * **OAuth2 Handshake:** Unlike standard IMAP setups, Outlook requires web-based token authentication to bypass MFA/2FA.
 
- ![Imap](./images/2.png)
+ ![Thunderbird_Imap](./images/2.png)
   
 * **Folder Mapping:** Verification of special IMAP folders (e.g., `Sent Items` vs `Sent`) to ensure no sub-directories are excluded from the sync.
 
