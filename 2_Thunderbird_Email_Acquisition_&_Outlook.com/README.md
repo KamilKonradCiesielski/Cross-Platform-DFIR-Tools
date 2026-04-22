@@ -19,14 +19,17 @@ This module demonstrates the forensic acquisition of **Outlook.com / Office 365*
 For cases where third-party tools cannot be installed, use the native Microsoft export options:
 
 * **Full PST Export:** Navigate to `Settings` > `General` > `Privacy and Data`. Select **Export Mailbox**.
-    * *Forensic Note:* This generates a full mailbox backup. Filtering by specific criteria is not possible during export; the entire dataset must be parsed later.
- 
-      ![Imap](./images/1.png)
-      
+
+![Export_Mailbox](./images/1.png)
+
+    * *Forensic Note:* This generates a full mailbox backup. Filtering by specific criteria is not possible during export; the entire dataset must be parsed later.     
 * **Targeted PDF Print:** For individual high-value messages, use the "Print to PDF" function within the web interface to secure immediate evidence of specific communications.
 
 ### Phase 2: Thunderbird Configuration & OAuth2
 * **OAuth2 Handshake:** Unlike standard IMAP setups, Outlook requires web-based token authentication to bypass MFA/2FA.
+
+ ![Imap](./images/2.png)
+  
 * **Folder Mapping:** Verification of special IMAP folders (e.g., `Sent Items` vs `Sent`) to ensure no sub-directories are excluded from the sync.
 
 ### Phase 3: Advanced Filtering & Triage
@@ -36,6 +39,8 @@ To isolate specific evidence (e.g., communications from a specific company or da
     * **Sender:** `from:domain.com`
     * **Date Range:** `received:2023-01-01..2023-12-31`
 * **Targeted Export:** Using the **ImportExportTools NG** add-on, selected messages can be exported as individual `.EML` files or compiled `PDFs` for reporting.
+
+   ![Drivers](./images/3.png)
 
 ### Phase 4: Full Data Sync & Validation
 * **Full Acquisition:** Toggling the network status to trigger the **"Pobierz wiadomości" (Download)** prompt for complete local caching.
